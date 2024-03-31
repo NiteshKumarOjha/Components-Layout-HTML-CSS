@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contenteditable</title>
+  </head>
+
+  <style>
+    blockquote {
+      background: #eee;
+      border-radius: 5px;
+      margin: 16px 0;
+    }
+
+    blockquote p {
+      padding: 15px;
+    }
+
+    cite {
+      margin: 16px 32px;
+      font-weight: bold;
+    }
+
+    blockquote p::before {
+      content: "\201C";
+    }
+
+    blockquote p::after {
+      content: "\201D";
+    }
+
+    [contenteditable="true"] {
+      caret-color: red;
+    }
+  </style>
+
+  <body>
+    <blockquote contenteditable="true">
+      <p>Write your own quote here!</p>
+    </blockquote>
+    <cite contenteditable="true">-- Write your name here</cite>
+  </body>
+</html>
